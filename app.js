@@ -68,6 +68,14 @@ await axios(config)
 
 });
 
-app.listen(port, () => {
+// app.listen(port, () => {
+//     console.log("server started to listen on " + port);
+// });
+
+
+dotenv.config();
+console.log(process.env.PORT)
+app.listen(process.env.PORT || 5000, () => {
     console.log("server started to listen on " + port);
 });
+
